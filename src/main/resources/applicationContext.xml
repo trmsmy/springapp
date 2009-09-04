@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/util 
+       http://www.springframework.org/schema/util/spring-util-2.0.xsd">
+
+  <!-- ExampleController -->
+  <bean id="mainPageController" class="com.springapp.MainPageController">
+    <property name="viewName" value="mainpage"/>
+  </bean>
+
+  <bean id="formPageController" class="com.springapp.FormPageController">
+		<property name="formView" value="formpage"/>
+		<property name="successView" value="formpage"/>
+		<property name="commandName" value="command"/>
+		<property name="commandClass" value="com.springapp.model.SearchForm" />
+		
+	</bean>
+  
+</beans>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<tiles-definitions>
+
+  <!-- Components -->
+  <definition name="head-tile" path="tiles/head.jsp"/>
+  <definition name="left-nav-tile" path="tiles/leftnav.jsp"/>
+  <definition name="body-tile" path="tiles/body.jsp"/>
+  <definition name="foot-tile" path="tiles/foot.jsp"/>
+
+  
+  <!--definition name="templateView" path="/WEB-INF/jsp/tiles/template.jsp" >
+	<put name="head-position" value="head-tile"/>
+    <put name="left-nav-position" value="left-nav-tile"/>
+    <put name="foot-position" value="foot-tile"/>
+	  
+  </definition-->
+	
+  <definition name="/WEB-INF/jsp/mainpage.jsp" path="/WEB-INF/jsp/mainpage.jsp">
+	  <put name="head-position" value="head-tile"/>
+    <put name="left-nav-position" value="left-nav-tile"/>
+    <put name="foot-position" value="foot-tile"/>
+	    <put name="body-position" value="body-tile"/>
+  </definition>
+  
+   <definition name="/WEB-INF/jsp/formpage.jsp" path="/WEB-INF/jsp/formpage.jsp">
+	  <put name="head-position" value="head-tile"/>
+    <put name="left-nav-position" value="left-nav-tile"/>
+    <put name="foot-position" value="foot-tile"/>
+	    
+  </definition>
+  
+  
+
+</tiles-definitions>

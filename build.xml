@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<project name="Spring_Sampl_App" basedir="src/main/webapp/" default="usage">
+	
+	<property name="web.dir" value="."/>
+	<property name="jsp.dir" value="/WEB-INF/jsp/"/>
+	<property name="build.dir" value="classes"/>
+	<property name="war.name" value="springapp" />
+	<property name="deploy.path" value="E:/apache-tomcat-5.5.26/webapps/" />
+	 
+	<target name="copy-to-tomcat" description="Static will be copied to tomcat folder">
+		<copy todir="${deploy.path}/${war.name}/WEB-INF/jsp" preservelastmodified="true" verbose="true">
+			<fileset dir="${web.dir}/WEB-INF/jsp">
+				<include name="**/*.jsp"/>				
+			</fileset>
+		</copy>
+		<copy todir="${deploy.path}/${war.name}/WEB-INF/" preservelastmodified="true" verbose="true">
+			<fileset dir="${web.dir}/WEB-INF/">
+				<include name="**/*.xml"/>				
+			</fileset>
+		</copy>
+		<copy todir="${deploy.path}/${war.name}/ui/" preservelastmodified="true" verbose="true">
+			<fileset dir="${web.dir}/ui/">
+				<include name="**/*"/>				
+			</fileset>
+		</copy>
+		
+	</target>
+
+</project>
