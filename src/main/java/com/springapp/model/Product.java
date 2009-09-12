@@ -3,11 +3,18 @@
  */
 package com.springapp.model;
 
+import java.io.Serializable;
+
 /**
  * @author ctsuser1
  *
  */
-public class Product {
+public class Product implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6313711110224078055L;
 
 	private int id;
 	

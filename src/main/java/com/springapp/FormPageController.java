@@ -25,20 +25,15 @@ public class FormPageController extends SimpleFormController {
 		  System.out.println("your input is ... " + searchParam);
 		  
 		  ModelAndView mv = null;
-	 
 		  mv = showForm(request, errors, getSuccessView());
 		  String pName = searchParam.getName();
 		  if (pName == null || pName.length() == 0) {
 			  pName = "Default_"; 
 		  }
-		  
 		  ProductSearch st = new ProductSearch();
 		  st.setProducts(Util.getTableData(pName, 50));
-
 		  HttpSession session = request.getSession();
-		  session.setAttribute("myName", "Tamil");
 		  session.setAttribute("TABLE_DATA", st.getAllProducts());
-		  
 		  session.setAttribute("pageSize", searchParam.getPageSize());
 		  System.out.println("done search ..... displaying results");
 		  return mv;
@@ -50,12 +45,9 @@ public class FormPageController extends SimpleFormController {
 		  command.setName("Default_");
 		  command.setPageSize("10");
 		  
-		  ProductSearch st = new ProductSearch();
-		  st.setProducts(Util.getTableData(command.getName(), 50));
 		  
 		  HttpSession session = request.getSession();
 		  session.setAttribute("myName", "Tamil");
-		  session.setAttribute("TABLE_DATA", st.getAllProducts());
 		  session.setAttribute("pageSize", command.getPageSize());
 		  
 		  return command;

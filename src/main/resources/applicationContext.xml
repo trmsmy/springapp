@@ -18,7 +18,6 @@
 		<property name="successView" value="formpage"/>
 		<property name="commandName" value="command"/>
 		<property name="commandClass" value="com.springapp.model.SearchForm" />
-		
 	</bean>
   
 </beans>

@@ -17,7 +17,7 @@
 		id="name" value="${status.value}" />
 		</spring:bind>
 		
-		Address: <spring:bind path="command.type">
+		Type: <spring:bind path="command.type">
 		<input type="text" name="${status.expression}" 
 		id="address" value="${status.value}" />
 		</spring:bind>
@@ -47,7 +47,8 @@
 			</spring:bind>
 		
 		 
-		<display:table name="sessionScope.TABLE_DATA" pagesize="${pageSize}" requestURI="formpage.html" class="results-table">
+		<display:table name="sessionScope.TABLE_DATA" 
+		pagesize="${pageSize}" requestURI="formpage.html?paging=true" class="results-table">
 		  <display:column property="id" title="ID" sortable="true" />
 		  <display:column property="name" title="Name" sortable="true" />
 		  <display:column property="type" title="Type" sortable="true" />
